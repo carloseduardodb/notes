@@ -1,4 +1,4 @@
-<div class="absolute left-0 bottom-0 w-full p-2">
+<div class="absolute left-0 bottom-0 w-full p-2 bg-white">
     @if ($paginator->hasPages())
         <nav role="navigation" aria-label="Pagination Navigation" class="flex items-center justify-between">
             <div class="flex justify-between flex-1 sm:hidden">

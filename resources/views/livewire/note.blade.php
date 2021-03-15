@@ -1,16 +1,16 @@
 <div class="border-2 border-white p-5 bg-white rounded w-6/12 shadow-lg relative" style="height: 600px; overflow-y: auto">
     <h2 class="border-b-2 border-gray-100 pb-3 font-bold text-2xl bg-gradient-to-r from-green-400 to-blue-500 text-white p-2 rounded">
         My Notes</h2>
-    <div class="flex flex-col mt-2 mb-3">
+    <form wire:submit.prevent="create" class="flex flex-col mt-2 mb-3">
         <label for="note">Type a note:</label>
-        <input id="note" class="border-2 rounded p-1 mb-1 mt-1" type="text" wire:model="note">
+        <input id="note" class="border-2 rounded p-1 mb-1 mt-1" type="text" wire:model.defer="note">
         @error('note') <span class="font-light text-red-400">{{ $message }}</span> @enderror
         <div class="text-right mt-2">
             <button class="bg-blue-500 border-2 border-blue-500 p-1.5 text-white font-bold
-            rounded hover:bg-white hover:text-blue-500" wire:click="create">Send
+            rounded hover:bg-white hover:text-blue-500" type="submit">Send
             </button>
         </div>
-    </div>
+    </form>
     <div class="flex flex-col mt-2 mb-3 bg-gradient-to-r from-green-400 to-blue-500 p-4 rounded">
         <label for="search" class="text-white font-bold">Search:</label>
         <input id="search" class="border-2 rounded p-1 mb-1 mt-1" type="text" wire:model="search">
@@ -93,7 +93,7 @@
                                 </h3>
                                 <div class="mt-2">
                                     <label>
-                                        <input wire:model="input_update" type="text"
+                                        <input wire:model.defer="input_update" type="text"
                                                id="input_update" placeholder="Note"
                                                class="border-2 rounded p-1 mb-1 mt-1 w-full">
                                     </label>
