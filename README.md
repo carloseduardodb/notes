@@ -33,8 +33,8 @@
 <p>As seguintes ferramentas foram usadas na construção do projeto:</p>
 <ul>
     <li><a href="https://laravel.com/docs/8.x">Laravel</a> Versão 8</li>
-    <li><a href="https://laravel.com/docs/8.x">Tailwind CSS</a></li>
-    <li><a href="https://laravel.com/docs/8.x">Livewire</a></li>
+    <li><a href="">Tailwind CSS</a></li>
+    <li><a href="">Livewire</a></li>
 </ul>
 
 ### Autor
